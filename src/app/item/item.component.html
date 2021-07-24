@@ -1,0 +1,5 @@
+<button (click)='displayParagraph()'>Display Details</button>
+<p *ngIf='display'>Secret password = tuna</p>
+<p *ngFor='let logItem of logItems; let i = index' [attr.data-index]='i'
+  [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'white'}" [ngClass]="{textColor: i>=5}">{{i+1}}st log item: {{logItem}}
+</p>
